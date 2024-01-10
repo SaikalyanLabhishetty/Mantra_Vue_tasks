@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/login">Task - 2: Login</RouterLink>
           <RouterLink to="/signup">Task - 2: SignUp</RouterLink>
           <RouterLink to="/events">Task - 3</RouterLink>
+          <RouterLink to="/emittask">Task - 4</RouterLink>
         </nav>
       </div>
     </header>
