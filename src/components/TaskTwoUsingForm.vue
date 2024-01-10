@@ -91,5 +91,9 @@ const sendData = () => {
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
+      margin-left: 48%;
+  }
+  h1{
+    text-align: center;
   }
   </style>

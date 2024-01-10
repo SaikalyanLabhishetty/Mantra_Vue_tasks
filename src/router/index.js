@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import TaskOne from '../components/TaskOne.vue';
+import TaskThree from "../components/TaskThree.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +19,11 @@ const router = createRouter({
       path: '/signup',
       name: 'signup',
       component: () => import('../views/SignUp.vue')
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: TaskThree
     }
   ]
 })

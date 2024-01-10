@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import TaskOne from './components/TaskOne.vue';
 </script>
 
 <template>
@@ -11,6 +10,7 @@ import TaskOne from './components/TaskOne.vue';
           <RouterLink to="/">Task-1</RouterLink>
           <RouterLink to="/login">Task - 2: Login</RouterLink>
           <RouterLink to="/signup">Task - 2: SignUp</RouterLink>
+          <RouterLink to="/events">Task - 3</RouterLink>
         </nav>
       </div>
     </header>
