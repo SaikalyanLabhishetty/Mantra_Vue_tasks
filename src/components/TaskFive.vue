@@ -5,7 +5,7 @@
             <div class="movie-cards" v-for="movie in movieData.slice(1, 10)" :key="movie._id">
                 <img :src="movie.poster_path" alt="movie_image">
                 <h4>{{ movie.title }}</h4>
-                <!-- <button @click="$router.push(`/movies/${movie._id}`)">More details</button> -->
+                <button @click="$router.push(`/movies/${movie._id}`)">More details</button>
             </div>
        </div> 
     </div>
