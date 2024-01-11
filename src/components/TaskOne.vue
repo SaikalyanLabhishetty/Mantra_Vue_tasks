@@ -9,8 +9,7 @@
       <div class="fetchContainer">
         <button @click="fetchData">Fetch Data</button>
         <ul>
-            <li v-for="info in data.slice(0, 20)" :key="info.id">ID: {{ info.id }} - Title: {{ info.title }}
-        </li>
+            <li v-for="info in data.slice(0, 20)" :key="info.id">ID: {{ info.id }} - Title: {{ info.title }}</li>
         </ul>
       </div>
     </div>

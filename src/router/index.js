@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import TaskOne from '../components/TaskOne.vue';
 import TaskThree from "../components/TaskThree.vue"
 import TaskFour from "../components/TaskFour.vue"
+import TaskFive from '../components/TaskFive.vue'
+import TaskFiveRoute from '../components/TaskFiveRoute.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +32,17 @@ const router = createRouter({
       path:'/emittask',
       name:'emittask',
       component: TaskFour
-    }
+    },
+    {
+      path:'/movies',
+      name:'movie',
+      component:TaskFive
+    },
+    {
+      path: '/movies/:id',
+      name: 'movieDetails',
+      component: TaskFiveRoute,
+    },
   ]
 })
 
