@@ -1,3 +1,4 @@
+<!-- ..src/app.vue -->
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
@@ -13,6 +14,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/events">Task - 3</RouterLink>
           <RouterLink to="/emittask">Task - 4</RouterLink>
           <RouterLink to="/movies">Task - 5</RouterLink>
+          <RouterLink to="/task">Task - 6</RouterLink>
         </nav>
       </div>
     </header>

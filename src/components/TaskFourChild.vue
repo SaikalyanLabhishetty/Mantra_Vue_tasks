@@ -24,6 +24,11 @@ const loadData = () => {
 }
 .data button{
     margin-left: 45%;
+    background-color: #007bff;
+    border: 1px solid white;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
 }
 
 </style>

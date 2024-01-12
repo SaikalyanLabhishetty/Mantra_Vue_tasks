@@ -19,7 +19,7 @@
     </div>
         <p v-if="winner">{{ winner }} wins!</p>
         <p v-else-if="isTie">It's a tie!</p>
-      <button @click="resetGame">Reset Game</button>
+      <button id="gameButton" @click="resetGame">Reset Game</button>
   </template>
   
   <script setup>
@@ -127,8 +127,18 @@
     background-color: rgb(78, 78, 78);
     font-size: 60px;
   }
-  button{
+  #gameButton{
+    padding: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 47%;
+    margin-bottom: 10px;
+    font-size: 20px;
     margin-top: 10px;
+
   }
   .container > p {
     text-align: center;

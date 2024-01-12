@@ -54,7 +54,7 @@
     margin-top: 20px;
   }
   
-  button {
+  .fetchContainer button {
     padding: 10px;
     cursor: pointer;
     background-color: #007bff;

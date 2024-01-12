@@ -1,5 +1,5 @@
 <template>
-    <button @click="fetchData">Fetch data</button>
+    <button id="fetchButton" @click="fetchData">Fetch data</button>
     <div class="movie-container">
        <div class="movie-row">
             <div class="movie-cards" v-for="movie in movieData.slice(1, 10)" :key="movie._id">
@@ -81,6 +81,16 @@
 .movie-cards h4{
     width: 170px;
     height: 40px;
+}
+#fetchButton{
+  margin-left: 48%;
+  height: 50px;
+  width: 100px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
 </style>  

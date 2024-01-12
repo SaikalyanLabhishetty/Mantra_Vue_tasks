@@ -1,3 +1,4 @@
+// router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import TaskOne from '../components/TaskOne.vue';
 import TaskThree from "../components/TaskThree.vue"
@@ -43,6 +44,11 @@ const router = createRouter({
       name: 'movieDetails',
       component: TaskFiveRoute,
     },
+    {
+      path: '/task',
+      name:'taskManagement',
+      component:() => import('../views/product.vue')
+    }
   ]
 })
 
