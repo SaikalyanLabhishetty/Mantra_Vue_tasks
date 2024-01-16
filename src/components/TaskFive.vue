@@ -90,7 +90,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
+  font-size: 18px;
 }
 
 </style>  

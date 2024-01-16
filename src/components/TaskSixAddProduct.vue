@@ -47,6 +47,7 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .ProductList {

@@ -29,6 +29,7 @@ const loadData = () => {
     height: 40px;
     width: 200px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 </style>

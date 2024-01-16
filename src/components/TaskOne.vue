@@ -1,15 +1,15 @@
 <template>
-    <div class="Container">
-      <div class="HeaderContainer">
-        <h1>Component rendering using Vue</h1>
+    <div class="flex flex-col text-white items-center">
+      <div class="flex flex-col items-center">
+        <h2 class="text-center">Component rendering using vue</h2>
       </div>
-      <div class="DescriptionContainer">
+      <div>
         <p>Here we are trying to fetch data from jsonplaceholderApi.</p>
       </div>
-      <div class="fetchContainer">
-        <button @click="fetchData">Fetch Data</button>
-        <ul>
-            <li v-for="info in data.slice(0, 20)" :key="info.id">ID: {{ info.id }} - Title: {{ info.title }}</li>
+      <div class="mt-4 flex flex-col items-center">
+        <button  @click="fetchData" class="px-4 py-2 bg-blue-500 h-12 w-50 text-white rounded cursor-pointer text-lg">Fetch Data</button>
+        <ul class="list-none">
+            <li  v-for="info in data.slice(0, 20)" :key="info.id" class="mt-2 text-center text-lg">ID: {{ info.id }} - Title: {{ info.title }}</li>
         </ul>
       </div>
     </div>
@@ -30,56 +30,4 @@
   };
   </script>
   
-  <style>
-  .Container {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: center;
-  }
-  
-  .HeaderContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-  }
-  
-  .fetchContainer {
-    margin-top: 20px;
-  }
-  
-  .fetchContainer button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 47%;
-    margin-bottom: 10px;
-    font-size: 20px;
-  }
-  p{
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    margin: 5px 0 0 5px;
-    font-size: 20px;
-    text-align: center;
-  }
-  </style>
   

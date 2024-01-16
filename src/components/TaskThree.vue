@@ -126,6 +126,7 @@
     color: rgb(255, 255, 255);
     background-color: rgb(78, 78, 78);
     font-size: 60px;
+    cursor: pointer;
   }
   #gameButton{
     padding: 10px;
