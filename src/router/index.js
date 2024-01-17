@@ -5,6 +5,7 @@ import TaskThree from "../components/TaskThree.vue"
 import TaskFour from "../components/TaskFour.vue"
 import TaskFive from '../components/TaskFive.vue'
 import TaskFiveRoute from '../components/TaskFiveRoute.vue'
+import TaskSixCartRoute from '../components/TaskSixCartRoute.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,6 +49,11 @@ const router = createRouter({
       path: '/task',
       name:'taskManagement',
       component:() => import('../views/product.vue')
+    },
+    {
+      path: '/cart',
+      name:'cartManagement',
+      component:TaskSixCartRoute
     }
   ]
 })

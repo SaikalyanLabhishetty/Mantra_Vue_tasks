@@ -1,8 +1,8 @@
 <template>
-    <div class="data">
-        <h1> {{ title }}</h1>
-        <h4> {{ content }}</h4>
-        <button @click="loadData">Get data from child</button>
+    <div class="flex flex-col">
+        <h1 class="text-center mt-2.5 mb-2.5"> {{ title }}</h1>
+        <h4 class="text-center mt-2.5 mb-2.5"> {{ content }}</h4>
+        <button @click="loadData" class="mx-auto bg-blue-500 border h-20 w-106 text-lg">Get data from child</button>
     </div>
 </template>
 
@@ -15,21 +15,3 @@ const loadData = () => {
 }
 
 </script>
-
-<style>
-.data > h4{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.data button{
-    margin-left: 45%;
-    background-color: #007bff;
-    border: 1px solid white;
-    height: 40px;
-    width: 200px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-</style>

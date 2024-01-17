@@ -1,25 +1,27 @@
 <template>
-     <p id="turn">{{ currentPlayer }}'s turn</p> 
-    <div class="container">
-      <div class="row">
-        <button id="inner-Box" @click="changeData(0, 0)">{{ grid[0][0] }}</button>
-        <button id="inner-Box" @click="changeData(0, 1)">{{ grid[0][1] }}</button>
-        <button id="inner-Box" @click="changeData(0, 2)">{{ grid[0][2] }}</button>
+     <p class="text-center mt-2.5 mb-2.5">{{ currentPlayer }}'s turn</p> 
+     <div class="flex flex-col justify-center">
+      <div class="container h-80 w-80 bg-gray-500 flex flex-col justify-center items-center mx-auto">
+      <div class="flex flex-row">
+        <button @click="changeData(0, 0)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[0][0] }}</button>
+        <button @click="changeData(0, 1)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[0][1] }}</button>
+        <button @click="changeData(0, 2)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[0][2] }}</button>
       </div>
-      <div class="row">
-        <button id="inner-Box" @click="changeData(1, 0)">{{ grid[1][0] }}</button>
-        <button id="inner-Box" @click="changeData(1, 1)">{{ grid[1][1] }}</button>
-        <button id="inner-Box" @click="changeData(1, 2)">{{ grid[1][2] }}</button>
+      <div class="flex flex-row">
+        <button @click="changeData(1, 0)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[1][0] }}</button>
+        <button @click="changeData(1, 1)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[1][1] }}</button>
+        <button @click="changeData(1, 2)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[1][2] }}</button>
       </div>
-      <div class="row">
-        <button id="inner-Box" @click="changeData(2, 0)">{{ grid[2][0] }}</button>
-        <button id="inner-Box" @click="changeData(2, 1)">{{ grid[2][1] }}</button>
-        <button id="inner-Box" @click="changeData(2, 2)">{{ grid[2][2] }}</button>
+      <div class="flex flex-row">
+        <button @click="changeData(2, 0)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[2][0] }}</button>
+        <button @click="changeData(2, 1)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[2][1] }}</button>
+        <button @click="changeData(2, 2)" class="inner-box h-16 w-16 m-4 text-white bg-gray-600 text-3xl cursor-pointer">{{ grid[2][2] }}</button>
       </div>
+      </div>
+        <p v-if="winner" class="text-center mt-2.5 mb-2.5">{{ winner }} wins!</p>
+        <p v-else-if="isTie" class="text-center mt-2.5 mb-2.5">It's a tie!</p>
+        <button  @click="resetGame" class="h-120 w-120 p-2 cursor-pointer bg-blue-500 text-white rounded-md text-lg mt-10 mx-auto my-auto">Reset Game</button>
     </div>
-        <p v-if="winner">{{ winner }} wins!</p>
-        <p v-else-if="isTie">It's a tie!</p>
-      <button id="gameButton" @click="resetGame">Reset Game</button>
   </template>
   
   <script setup>
@@ -101,54 +103,5 @@
     currentPlayer.value = "X";
   };
   </script>
-  
-  <style>
-  .container {
-    height: 400px;
-    width: 400px;
-    background-color: grey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 39.5%;
-  }
-  
-  .row {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  #inner-Box {
-    height: 100px;
-    width: 100px;
-    margin: 15px 15px 15px 15px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(78, 78, 78);
-    font-size: 60px;
-    cursor: pointer;
-  }
-  #gameButton{
-    padding: 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 47%;
-    margin-bottom: 10px;
-    font-size: 20px;
-    margin-top: 10px;
 
-  }
-  .container > p {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #turn > p{
-    margin: 10px;
-    font-size: 24px;
-  }
-  </style>
   
